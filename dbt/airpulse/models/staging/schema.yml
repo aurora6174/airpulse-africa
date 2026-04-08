@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: raw
+    database: AIRPULSE
+    schema: RAW
+    tables:
+      - name: AIR_QUALITY_READINGS
+        description: Raw air quality readings streamed from OpenAQ via Redpanda
+
+models:
+  - name: stg_air_quality
+    description: Cleaned staging layer — normalised countries, filtered nulls and negatives
+    columns:
+      - name: location_id
+        tests: [not_null]
+      - name: parameter
+        tests: [not_null, accepted_values: {values: ['pm25','pm10','no2','co','o3','so2']}]
+      - name: reading_value
+        tests: [not_null]
+      - name: country
+        tests: [not_null]
+
+  - name: mart_pollutant_distribution
+    description: Aggregate stats per country and pollutant — feeds dashboard Tile 1
+
+  - name: mart_quality_timeseries
+    description: Hourly averages per country and pollutant — feeds dashboard Tile 2

@@ -1,0 +1,49 @@
+[0m13:57:17.102771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7786e7bd8e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7786ea713500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7786ea710ef0>]}
+
+
+============================== 13:57:17.108887 | 971347a6-c658-4f40-aafe-0719d73d5b3b ==============================
+[0m13:57:17.108887 [info ] [MainThread]: Running with dbt=1.7.19
+[0m13:57:17.110075 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/home/aurora/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt init airpulse', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:57:17.113738 [debug] [MainThread]: Starter project path: /home/aurora/projects/airpulse-africa/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m13:57:17.143126 [info ] [MainThread]: 
+Your new dbt project "airpulse" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:57:17.144255 [info ] [MainThread]: Setting up your profile.
+[0m14:02:48.692188 [info ] [MainThread]: Profile airpulse written to /home/aurora/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m14:02:48.698256 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 331.6961, "process_user_time": 4.452057, "process_kernel_time": 1.726843, "process_mem_max_rss": "192660", "process_in_blocks": "266272", "process_out_blocks": "80"}
+[0m14:02:48.699556 [debug] [MainThread]: Command `dbt init` succeeded at 14:02:48.699261 after 331.70 seconds
+[0m14:02:48.700575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7786d5c0fbf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7786cfb630b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7786d48ba6c0>]}
+[0m14:02:48.704427 [debug] [MainThread]: Flushing usage events
+[0m14:03:14.328203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc229b6810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc237b1430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc229b6cf0>]}
+
+
+============================== 14:03:14.332388 | fbf14dc6-2ae0-4ed5-9c5e-6d9dd5d15f72 ==============================
+[0m14:03:14.332388 [info ] [MainThread]: Running with dbt=1.7.19
+[0m14:03:14.333705 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/aurora/.dbt', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:03:14.334671 [info ] [MainThread]: dbt version: 1.7.19
+[0m14:03:14.335435 [info ] [MainThread]: python version: 3.12.3
+[0m14:03:14.336316 [info ] [MainThread]: python path: /home/aurora/projects/airpulse-africa/.venv/bin/python3
+[0m14:03:14.337056 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m14:03:15.549875 [info ] [MainThread]: Using profiles dir at /home/aurora/.dbt
+[0m14:03:15.550783 [info ] [MainThread]: Using profiles.yml file at /home/aurora/.dbt/profiles.yml
+[0m14:03:15.551734 [info ] [MainThread]: Using dbt_project.yml file at /home/aurora/projects/airpulse-africa/dbt/dbt_project.yml
+[0m14:03:15.552736 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m14:03:15.554316 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.3272913, "process_user_time": 4.615433, "process_kernel_time": 0.806261, "process_mem_max_rss": "194424", "process_out_blocks": "16", "command_success": false, "process_in_blocks": "0"}
+[0m14:03:15.555960 [debug] [MainThread]: Command `dbt debug` failed at 14:03:15.555477 after 1.33 seconds
+[0m14:03:15.558062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc237b1430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc110b25d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cbc22dc0680>]}
+[0m14:03:15.559571 [debug] [MainThread]: Flushing usage events

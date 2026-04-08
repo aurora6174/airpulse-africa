@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+dbt/profiles.yml
+dbt/target/
+dbt/.user.yml
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+*.zip
+awscliv2/
