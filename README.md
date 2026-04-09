@@ -83,15 +83,15 @@ All infrastructure provisioned via **Terraform** (IaC).
 - **Poll interval**: Every 60 seconds
 - **WHO thresholds used** (24h mean, µg/m³):
 
-| Pollutant | WHO Limit |
-|---|---|
-| PM2.5 | 15 µg/m³ |
-| PM10 | 45 µg/m³ |
-| NO2 | 25 µg/m³ |
-| CO | 4,000 µg/m³ |
-| O3 | 100 µg/m³ |
-| SO2 | 40 µg/m³ |
 
+| Pollutant | Full Name | WHO Limit | Health Impact |
+|---|---|---|---|
+| PM2.5 | Fine Particulate Matter (≤2.5 micrometres) | 15 µg/m³ | Penetrates deep into lungs and bloodstream — linked to heart disease, stroke and lung cancer |
+| PM10 | Coarse Particulate Matter (≤10 micrometres) | 45 µg/m³ | Irritates airways — causes asthma, bronchitis and respiratory infections |
+| NO2 | Nitrogen Dioxide | 25 µg/m³ | Produced by vehicles and industry — inflames airways and worsens asthma |
+| CO | Carbon Monoxide | 4,000 µg/m³ | Odourless gas from combustion — reduces oxygen delivery in the bloodstream |
+| O3 | Ozone (ground-level) | 100 µg/m³ | Formed by sunlight reacting with pollutants — causes chest pain and breathing difficulty |
+| SO2 | Sulphur Dioxide | 40 µg/m³ | Produced by burning fossil fuels — irritates the respiratory system and causes acid rain |
 ---
 
 ## Dashboard
@@ -265,20 +265,6 @@ airpulse-africa/
 └── dashboard/
     └── app.py                    # Streamlit dashboard
 ```
-
----
-
-## Evaluation Criteria Coverage
-
-| Criterion | Implementation | Score |
-|---|---|---|
-| Problem description | Clearly defined — air pollution monitoring across Africa | 4/4 |
-| Cloud | AWS S3 + IAM provisioned via Terraform | 4/4 |
-| Streaming | Redpanda broker + Python producer + 2 consumers | 4/4 |
-| Data warehouse | Snowflake with CLUSTER BY on COUNTRY, PARAMETER, DATE | 4/4 |
-| Transformations | dbt staging view + 2 mart tables with tests | 4/4 |
-| Dashboard | Streamlit with 2 tiles (bar + line) | 4/4 |
-| Reproducibility | Step-by-step README with copy-paste commands | 4/4 |
 
 ---
 
