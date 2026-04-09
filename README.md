@@ -23,36 +23,7 @@ Our pipeline revealed stark air quality realities across Africa:
 
 ## Architecture
 
-```
-OpenAQ API
-    │
-    ▼
-Python Producer (polls every 60s)
-    │
-    ▼
-Redpanda (Kafka-compatible broker)
-    │  air-quality-readings topic
-    ├──────────────────────┐
-    ▼                      ▼
-Consumer (S3)        Consumer (Snowflake)
-    │                      │
-    ▼                      ▼
-AWS S3 Data Lake     Snowflake RAW layer
-(raw JSON, partitioned  (AIR_QUALITY_READINGS)
- by country/date)          │
-                           ▼
-                      dbt transforms
-                      (staging → mart)
-                           │
-                           ▼
-                    Streamlit Dashboard
-                    (2 tiles, live data)
-                           │
-                    Prefect Orchestration
-                    (schedules dbt every 5 min)
-```
-
-All infrastructure provisioned via **Terraform** (IaC).
+![AirPulse Africa Architecture](screenshots/architecture.png)
 
 ---
 
