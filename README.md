@@ -123,7 +123,7 @@ Both mart tables are clustered by `(COUNTRY, PARAMETER)` for fast dashboard quer
 
 ### Step 1 — Clone and set up environment
 ```bash
-git clone https://github.com/yourusername/airpulse-africa.git
+git clone https://github.com/aurora6174/airpulse-africa.git
 cd airpulse-africa
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
